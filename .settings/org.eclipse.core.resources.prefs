@@ -5,3 +5,4 @@ encoding//test/test3.py=utf-8
 encoding//test/test_analyse.py=utf-8
 encoding//test/test_srt.py=utf-8
 encoding//tools/GetSrt.py=utf-8
+encoding//tools/mprint.py=utf-8
