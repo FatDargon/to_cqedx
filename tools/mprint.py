@@ -16,8 +16,8 @@ def pretty_dict(obj, indent=' '):
         for i, tup in enumerate(obj.items()):
             k, v = tup
             # 如果是字符串则拼�?""
-            if isinstance(k, basestring): k = '"%s"' % k
-            if isinstance(v, basestring): v = '"%s"' % v
+            if isinstance(k, str): k = '"%s"' % k
+            if isinstance(v, str): v = '"%s"' % v
             # 如果是字典则递归
             if isinstance(v, dict):
                 v = ''.join(_pretty(v, indent + ' ' * len(str(k) + ': {')))  # 计算下一层的indent
