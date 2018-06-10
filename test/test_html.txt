@@ -1,0 +1,1379 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>
+
+ What is Deep Learning | DAT236x Courseware | Contoso Learning
+</title>
+
+      <script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+  
+
+  <script type="text/javascript" src="/static/js/i18n/en/djangojs.b28203373cc1.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.c074c912999f.ico" />
+
+  
+  
+
+    <link href="/static/css/lms-style-vendor.810246d53832.css" rel="stylesheet" type="text/css" />
+
+
+
+  
+  
+
+    <link href="/static/css/lms-main-v1.5a41f023ae81.css" rel="stylesheet" type="text/css" />
+
+
+
+
+      
+    <script type="text/javascript" src="/static/js/lms-main_vendor.a04b73033169.js" charset="utf-8"></script>
+
+
+      
+    <script type="text/javascript" src="/static/js/lms-application.54ad00c8a25e.js" charset="utf-8"></script>
+
+
+
+  <script>
+    window.baseUrl = "/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="/static/lms/js/require-config.cd72e66c1a3e.js"></script>
+  
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.ff726dbd2c81',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.22ad04bb0497',
+'js/courseware/course_home_events': 'js/courseware/course_home_events.efe56112dd91',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'moment': 'common/js/vendor/moment-with-locales.47b1957c6c17',
+'moment-timezone': 'common/js/vendor/moment-timezone-with-data.60142e6c4416',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.541254eb1ae0',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.eb8701884901',
+'js/dateutil_factory': 'js/dateutil_factory.3338efcb3d28',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.6064c7809de5',
+'js/bookmarks/views/bookmark_button': 'js/bookmarks/views/bookmark_button.bca63457af5c',
+'js/views/message_banner': 'js/views/message_banner.099aec538f98',
+'js/student_profile/views/learner_profile_factory': 'js/student_profile/views/learner_profile_factory.ca3e75aa6ebf'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+  
+
+    
+    <script type="text/javascript" src="/static/js/lms-modules.515609b002b0.js" charset="utf-8"></script>
+
+
+
+  
+
+  
+
+    <link href="/static/css/lms-style-course-vendor.ace00506444f.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+
+    <link href="/static/css/lms-course.be12ff32fbc5.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<script type="text/javascript" src="/static/js/jquery.autocomplete.3bd10d7510d2.js"></script>
+<script type="text/javascript" src="/static/js/src/tooltip_manager.e3531e99ed92.js"></script>
+
+<link href="/static/css/vendor/jquery.autocomplete.09a0b34739a2.css" rel="stylesheet" type="text/css">
+  
+
+
+  
+
+  
+
+
+  
+
+
+<!-- dummy Segment -->
+<script type="text/javascript">
+  var analytics = {
+    track: function() { return; },
+    trackLink: function() { return; },
+    pageview: function() { return; },
+    page: function() { return; }
+  };
+</script>
+<!-- end dummy Segment -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
+
+
+
+</head>
+
+<body class="ltr view-in-course view-courseware courseware  lang_en">
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip" href="#main">Skip to main content</a>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+  <header id="global-navigation" class="header-global slim" >
+    <nav class="wrapper-header" aria-label="Global">
+    <h1 class="logo">
+      <a href="/">
+        
+        
+            <img class="" src="/static/images/logo.b6c374d66d57.png" alt="Contoso Learning Home Page"/>
+        
+      </a>
+    </h1>
+
+      <h2 class="course-header"><span class="provider">EDX:</span>
+        <span class="course-number">DAT236x</span>
+        
+        <span class="course-name">Deep Learning Explained</span></h2>
+
+        <ol class="left nav-global list-inline authenticated">
+        
+            <li class="item nav-global-01">
+              <a href="/courses">Explore courses</a>
+            </li>
+        
+      </ol>
+
+      
+
+
+
+
+
+
+    <ol class="user">
+        <li class="primary">
+            <a href="/dashboard" class="user-link">
+                <span class="sr">Dashboard for:</span>
+                
+                <img class="user-image-frame" src="/static/images/profiles/default_50.3455a6581573.png" alt="">
+                <div class="label-username">edx006</div>
+            </a>
+        </li>
+        <li class="primary">
+            <div role="group" aria-label="User menu" class="user-menu">
+                <button class="dropdown" aria-expanded="false"><span class="sr">More options dropdown</span><span class="fa fa-sort-desc" aria-hidden="true"></span></button>
+                <ul class="dropdown-menu" aria-label="More Options" role="menu">
+                    
+                    <li class="dropdown-item item has-block-link"><a href="/dashboard" role="menuitem" class="action dropdown-menuitem">Dashboard</a></li>
+                    <li class="dropdown-item item has-block-link"><a href="/u/edx006" role="menuitem" class="action dropdown-menuitem">Profile</a></li>
+                    <li class="dropdown-item item has-block-link"><a href="/cookies/settings" role="menuitem" class="action dropdown-menuitem">Account</a></li>
+                
+                    <li class="item"><a href="/logout" role="menuitem" class="dropdown-menuitem">Sign Out</a></li>
+                </ul>
+            </div>
+        </li>
+    </ol>
+
+
+      <a href="https://edx.readthedocs.io/projects/open-edx-learner-guide/en/latest/index.html" 
+         target="_blank"
+         class="doc-link">Help</a>
+
+    </nav>
+</header>
+<!--[if lte IE 9]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/chrome" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+    <div class="content-wrapper" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/template" id="image-modal-tpl">
+    <div class="wrapper-modal wrapper-modal-image">
+  <section class="image-link">
+    <%= smallHTML%>
+    <a href="#" class="modal-ui-icon action-fullscreen" role="button">
+      <span class="label">
+        <span class="icon fa fa-arrows-alt fa-large" aria-hidden="true"></span> <%- gettext("Fullscreen") %>
+      </span>
+    </a>
+  </section>
+
+  <section class="image-modal">
+    <section class="image-content">
+      <div class="image-wrapper">
+        <img alt="<%= largeALT %>, <%- gettext('Large') %>" src="<%= largeSRC %>" />
+      </div>
+
+      <a href="#" class="modal-ui-icon action-close" role="button">
+        <span class="label">
+          <span class="icon fa fa-remove fa-large" aria-hidden="true"></span> <%- gettext("Close") %>
+        </span>
+      </a>
+
+      <ul class="image-controls">
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-in" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-plus fa-large" aria-hidden="true"></span> <%- gettext("Zoom In") %>
+            </span>
+          </a>
+        </li>
+
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-out is-disabled" aria-disabled="true" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-minus fa-large" aria-hidden="true"></span> <%- gettext("Zoom Out") %>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+</script>
+
+
+
+
+
+
+
+
+
+<div class="message-banner" aria-live="polite"></div>
+
+  
+
+
+
+
+
+
+    <nav class="courseware wrapper-course-material" aria-label="Course Material">
+        <div class="course-material">
+            
+            <ol class="tabs course-tabs">
+                
+
+
+
+
+
+  
+  <li class="tab">
+  <a href="/courses/course-v1:EDX+DAT236x+2018/info" class="">
+  Home
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="/courses/course-v1:EDX+DAT236x+2018/courseware" class="active">
+  Course
+      <span class="sr">, current location</span>
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="/courses/course-v1:EDX+DAT236x+2018/discussion/forum/" class="">
+  Discussion
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="/courses/course-v1:EDX+DAT236x+2018/course_wiki" class="">
+  Wiki
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="/courses/course-v1:EDX+DAT236x+2018/progress" class="">
+  Progress
+  </a>
+  </li>
+
+                
+            </ol>
+        </div>
+    </nav>
+
+
+
+<div class="container">
+  <div class="course-wrapper" role="presentation">
+
+    <div class="course-index">
+
+      <div class="wrapper-course-modes">
+
+          <div class="courseware-bookmarks-button" data-bookmarks-api-url="/api/bookmarks/v1/bookmarks/">
+              <button type="button" class="bookmarks-list-button is-inactive" aria-pressed="false">
+                  Bookmarks
+              </button>
+          </div>
+
+
+      </div>
+
+      <div class="accordion">
+        <nav class="course-navigation" aria-label="Course">
+            
+
+
+
+
+
+    
+
+<a href="#welcome-to-course-child" role="button" class="button-chapter chapter " id="welcome-to-course-parent" aria-controls="welcome-to-course-child" aria-expanded="false">
+    <span class="group-heading " aria-label="Welcome to course">
+        <span class="icon fa fa-caret-right" aria-hidden="true"></span>
+        Welcome to course
+    </span>
+</a>
+<div class="chapter-content-container" id="welcome-to-course-child" tabindex="-1" role="group" aria-label="Welcome to course submenu">
+    <div class="chapter-menu">
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/196672f7e2f74e6bab2e66ae53e385c6/bd008132594a43ab9d60b9accfd536a1/">
+                <p class="accordion-display-name">Welcome </p>
+
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+    
+
+<a href="#1-introduction-and-overview-child" role="button" class="button-chapter chapter active" id="1-introduction-and-overview-parent" aria-controls="1-introduction-and-overview-child" aria-expanded="false">
+    <span class="group-heading active" aria-label="1 | Introduction and Overview current chapter">
+        <span class="icon fa fa-caret-right" aria-hidden="true"></span>
+        1 | Introduction and Overview
+    </span>
+</a>
+<div class="chapter-content-container" id="1-introduction-and-overview-child" tabindex="-1" role="group" aria-label="1 | Introduction and Overview submenu">
+    <div class="chapter-menu">
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/0cd24d399d3b45a49c12b59d222518de/14a88fadac16450eb546da7b706c72bc/">
+                <p class="accordion-display-name">Introduction and Overview </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item active ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/0cd24d399d3b45a49c12b59d222518de/eb2c28f63bde496685005ac814d63de8/">
+                <p class="accordion-display-name">What is Deep Learning <span class="sr">current section</span></p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/0cd24d399d3b45a49c12b59d222518de/ffccf5ea27db47ceb313c66e7ede6cf6/">
+                <p class="accordion-display-name">Environment Setup </p>
+
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+    
+
+<a href="#2-multi-class-classification-using-logistic-regression-child" role="button" class="button-chapter chapter " id="2-multi-class-classification-using-logistic-regression-parent" aria-controls="2-multi-class-classification-using-logistic-regression-child" aria-expanded="false">
+    <span class="group-heading " aria-label="2 | Multi-class Classification using Logistic Regression">
+        <span class="icon fa fa-caret-right" aria-hidden="true"></span>
+        2 | Multi-class Classification using Logistic Regression
+    </span>
+</a>
+<div class="chapter-content-container" id="2-multi-class-classification-using-logistic-regression-child" tabindex="-1" role="group" aria-label="2 | Multi-class Classification using Logistic Regression submenu">
+    <div class="chapter-menu">
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/297a577e7d8f4c80a55920e95d3edc0e/6c4fe68862d14450a3003a13827041dd/">
+                <p class="accordion-display-name">Lectures </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/297a577e7d8f4c80a55920e95d3edc0e/dd4dad0e52064d3d9cacb31271182cbb/">
+                <p class="accordion-display-name">Knowledge Checks </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/297a577e7d8f4c80a55920e95d3edc0e/84b3304e8d0641919280b7a26dcea70e/">
+                <p class="accordion-display-name">Tutorials </p>
+
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+    
+
+<a href="#3-multi-layer-perceptron-child" role="button" class="button-chapter chapter " id="3-multi-layer-perceptron-parent" aria-controls="3-multi-layer-perceptron-child" aria-expanded="false">
+    <span class="group-heading " aria-label="3 | Multi-Layer Perceptron">
+        <span class="icon fa fa-caret-right" aria-hidden="true"></span>
+        3 | Multi-Layer Perceptron
+    </span>
+</a>
+<div class="chapter-content-container" id="3-multi-layer-perceptron-child" tabindex="-1" role="group" aria-label="3 | Multi-Layer Perceptron submenu">
+    <div class="chapter-menu">
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/84f69b9a7c7d466cb5bf0ddd8c35690f/79959f7e9181420f88591e5ade29b1b0/">
+                <p class="accordion-display-name">Lectures </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/84f69b9a7c7d466cb5bf0ddd8c35690f/bb3629d89a944e5ea17ec399bde7b7e0/">
+                <p class="accordion-display-name">Knowledge Checks </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/84f69b9a7c7d466cb5bf0ddd8c35690f/c49f7a42fb2f43d681a6c208ad05a05e/">
+                <p class="accordion-display-name">Tutorials </p>
+
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+    
+
+<a href="#4-convolution-neural-network-child" role="button" class="button-chapter chapter " id="4-convolution-neural-network-parent" aria-controls="4-convolution-neural-network-child" aria-expanded="false">
+    <span class="group-heading " aria-label="4 | Convolution Neural Network">
+        <span class="icon fa fa-caret-right" aria-hidden="true"></span>
+        4 | Convolution Neural Network
+    </span>
+</a>
+<div class="chapter-content-container" id="4-convolution-neural-network-child" tabindex="-1" role="group" aria-label="4 | Convolution Neural Network submenu">
+    <div class="chapter-menu">
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/0d9c1cc8d2104c28a6fee068269aa13f/ef5fbe2e93424547a0ba38d921a4f4b0/">
+                <p class="accordion-display-name">Lectures </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/0d9c1cc8d2104c28a6fee068269aa13f/bc6a858326fc460da661c4a45c9fa96e/">
+                <p class="accordion-display-name">Knowledge Checks </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/0d9c1cc8d2104c28a6fee068269aa13f/a4afe180bac84788a8ad1611aa6a6660/">
+                <p class="accordion-display-name">Tutorials </p>
+
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+    
+
+<a href="#5-recurrent-neural-network-and-long-short-term-memory-child" role="button" class="button-chapter chapter " id="5-recurrent-neural-network-and-long-short-term-memory-parent" aria-controls="5-recurrent-neural-network-and-long-short-term-memory-child" aria-expanded="false">
+    <span class="group-heading " aria-label="5 | Recurrent Neural Network and Long Short Term Memory">
+        <span class="icon fa fa-caret-right" aria-hidden="true"></span>
+        5 | Recurrent Neural Network and Long Short Term Memory
+    </span>
+</a>
+<div class="chapter-content-container" id="5-recurrent-neural-network-and-long-short-term-memory-child" tabindex="-1" role="group" aria-label="5 | Recurrent Neural Network and Long Short Term Memory submenu">
+    <div class="chapter-menu">
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/3db3372d8f0942549caa431d94110f35/1b7c2a781a2d4e4e97b65c18db157803/">
+                <p class="accordion-display-name">Lectures </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/3db3372d8f0942549caa431d94110f35/42ea50e46a754c43b6dcc4d00ef47d3a/">
+                <p class="accordion-display-name">Knowledge Checks </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/3db3372d8f0942549caa431d94110f35/3a59214e0ad747f9a4eec6941b3c756b/">
+                <p class="accordion-display-name">Tutorials </p>
+
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+    
+
+<a href="#6-text-classification-with-rnn-and-lstm-child" role="button" class="button-chapter chapter " id="6-text-classification-with-rnn-and-lstm-parent" aria-controls="6-text-classification-with-rnn-and-lstm-child" aria-expanded="false">
+    <span class="group-heading " aria-label="6 | Text Classification with RNN and LSTM">
+        <span class="icon fa fa-caret-right" aria-hidden="true"></span>
+        6 | Text Classification with RNN and LSTM
+    </span>
+</a>
+<div class="chapter-content-container" id="6-text-classification-with-rnn-and-lstm-child" tabindex="-1" role="group" aria-label="6 | Text Classification with RNN and LSTM submenu">
+    <div class="chapter-menu">
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/9a818fbe588c4fafb53447023ed99259/20a879cc0c9743309929afe689b4b661/">
+                <p class="accordion-display-name">Lectures </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/9a818fbe588c4fafb53447023ed99259/418ca30dbf6f411ab8e84715033af614/">
+                <p class="accordion-display-name">Knowledge Checks </p>
+
+                
+            </a>
+        </div>
+        <div class="menu-item  ">
+            <a class="accordion-nav" href="/courses/course-v1:EDX+DAT236x+2018/courseware/9a818fbe588c4fafb53447023ed99259/57a39262770a4b0b8108daf994a0022d/">
+                <p class="accordion-display-name">Tutorials </p>
+
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+    
+  
+  <script type="text/javascript">
+    (function (require) {
+        require(['/static/js/courseware/accordion_events.6064c7809de5.js?raw'], function () {
+          require(['js/courseware/accordion_events'], function (AccordionEvents) {
+            
+        AccordionEvents();
+    
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  </script>
+
+
+    
+  
+  <script type="text/javascript">
+    (function (require) {
+        require(['/static/js/dateutil_factory.3338efcb3d28.js?raw'], function () {
+          require(['js/dateutil_factory'], function (DateUtilFactory) {
+            
+        DateUtilFactory.transform(iterationKey=".localized-datetime");
+    
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  </script>
+
+
+        </nav>
+      </div>
+
+    </div>
+    <section class="course-content" id="course-content">
+        <div class="path"></div>
+        <main id="main" aria-label="Content" tabindex="-1">
+
+          <div class="xblock xblock-student_view xblock-student_view-sequential xmodule_display xmodule_SequenceModule" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="sequential" data-request-token="c95de0ee6a4b11e8b9370017fa00df4b" data-runtime-version="1" data-usage-id="block-v1:EDX+DAT236x+2018+type@sequential+block@eb2c28f63bde496685005ac814d63de8" data-type="Sequence" data-course-id="course-v1:EDX+DAT236x+2018">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "Sequence"}
+  </script>
+  
+
+
+<div id="sequence_eb2c28f63bde496685005ac814d63de8" class="sequence" data-id="block-v1:EDX+DAT236x+2018+type@sequential+block@eb2c28f63bde496685005ac814d63de8" data-position="2" data-ajax-url="/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@sequential+block@eb2c28f63bde496685005ac814d63de8/handler/xmodule_handler" data-next-url="/courses/course-v1:EDX+DAT236x+2018/courseware/0cd24d399d3b45a49c12b59d222518de/ffccf5ea27db47ceb313c66e7ede6cf6/?child=first" data-prev-url="/courses/course-v1:EDX+DAT236x+2018/courseware/0cd24d399d3b45a49c12b59d222518de/14a88fadac16450eb546da7b706c72bc/?child=last">
+  <div class="sequence-nav">
+    <button class="sequence-nav-button button-previous">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span>Previous</span>
+    </button>
+    <nav class="sequence-list-wrapper" aria-label="Unit">
+      <ol id="sequence-list">
+        <li>
+        <button class="seq_video inactive nav-item"
+           data-id="block-v1:EDX+DAT236x+2018+type@vertical+block@c6a9af95f71f4ba48dd91ce29ef3222c"
+           data-element="1"
+           data-page-title="What is Machine Learning"
+           data-path="1 | Introduction and Overview &gt; What is Deep Learning &gt; What is Machine Learning"
+           id="tab_0">
+            <span class="icon fa seq_video" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">video&nbsp;</span>What is Machine Learning<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li>
+        <button class="seq_video inactive nav-item"
+           data-id="block-v1:EDX+DAT236x+2018+type@vertical+block@6fe7363d80eb4546abd6d62a857901f6"
+           data-element="2"
+           data-page-title="What is Deep Learning"
+           data-path="1 | Introduction and Overview &gt; What is Deep Learning &gt; What is Deep Learning"
+           id="tab_1">
+            <span class="icon fa seq_video" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">video&nbsp;</span>What is Deep Learning<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li>
+        <button class="seq_video inactive nav-item"
+           data-id="block-v1:EDX+DAT236x+2018+type@vertical+block@dcbbc95341cc41e7b65163e1f6e31dea"
+           data-element="3"
+           data-page-title="Machine Learning Recap"
+           data-path="1 | Introduction and Overview &gt; What is Deep Learning &gt; Machine Learning Recap"
+           id="tab_2">
+            <span class="icon fa seq_video" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">video&nbsp;</span>Machine Learning Recap<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li>
+        <button class="seq_video inactive nav-item"
+           data-id="block-v1:EDX+DAT236x+2018+type@vertical+block@d1a6c7089b47473faf07a60a2d74381d"
+           data-element="4"
+           data-page-title="Train Workflow"
+           data-path="1 | Introduction and Overview &gt; What is Deep Learning &gt; Train Workflow"
+           id="tab_3">
+            <span class="icon fa seq_video" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">video&nbsp;</span>Train Workflow<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+        <li>
+        <button class="seq_video inactive nav-item"
+           data-id="block-v1:EDX+DAT236x+2018+type@vertical+block@8707f4d9a93c41a5aaac34d27fdab950"
+           data-element="5"
+           data-page-title="Validation and Test Workflow"
+           data-path="1 | Introduction and Overview &gt; What is Deep Learning &gt; Validation and Test Workflow"
+           id="tab_4">
+            <span class="icon fa seq_video" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">video&nbsp;</span>Validation and Test Workflow<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+      </ol>
+    </nav>
+    <button class="sequence-nav-button button-next">
+      <span>Next</span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="sr-is-focusable" tabindex="-1"></div>
+
+  <div id="seq_contents_0"
+    aria-labelledby="tab_0"
+    aria-hidden="true"
+    class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-vertical&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;VerticalStudentView&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@vertical+block@c6a9af95f71f4ba48dd91ce29ef3222c&#34; data-block-type=&#34;vertical&#34;&gt;
+  
+
+  &lt;h3 class=&#34;unit-title&#34;&gt;What is Machine Learning&lt;/h3&gt;
+
+    
+
+
+&lt;div class=&#34;bookmark-button-wrapper&#34;&gt;
+  &lt;button class=&#34;btn btn-link bookmark-button &#34;
+    aria-pressed=&#34;false&#34;
+    data-bookmark-id=&#34;edx006,block-v1:EDX+DAT236x+2018+type@vertical+block@c6a9af95f71f4ba48dd91ce29ef3222c&#34;&gt;
+     &lt;span class=&#34;sr bookmark-sr&#34;&gt;Click to add&lt;/span&gt;
+     &lt;span class=&#34;bookmark-text&#34;&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;vert-mod&#34;&gt;
+  &lt;div class=&#34;vert vert-0&#34; data-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@ce5a2de4357b429dac3b42bda12a3940&#34;&gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-video xmodule_display xmodule_VideoModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;video&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@ce5a2de4357b429dac3b42bda12a3940&#34; data-type=&#34;Video&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Video&#34;}
+  &lt;/script&gt;
+  
+
+
+    &lt;h3 class=&#34;hd hd-2&#34;&gt;Video&lt;/h3&gt;
+
+&lt;div
+    id=&#34;video_ce5a2de4357b429dac3b42bda12a3940&#34;
+    class=&#34;video closed&#34;
+    data-metadata=&#39;{&amp;#34;savedVideoPosition&amp;#34;: 26.0, &amp;#34;ytMetadataUrl&amp;#34;: &amp;#34;https://www.googleapis.com/youtube/v3/videos/&amp;#34;, &amp;#34;sources&amp;#34;: [&amp;#34;https://edxmediastroage.blob.core.chinacloudapi.cn/course/MSXDLEXX2017-V004200_DTH.mp4&amp;#34;], &amp;#34;speed&amp;#34;: null, &amp;#34;generalSpeed&amp;#34;: 1.0, &amp;#34;end&amp;#34;: 0.0, &amp;#34;sub&amp;#34;: &amp;#34;MSXDLEXX2017-V004200_DTH&amp;#34;, &amp;#34;ytTestTimeout&amp;#34;: 1500, &amp;#34;transcriptLanguages&amp;#34;: {&amp;#34;en&amp;#34;: &amp;#34;English&amp;#34;}, &amp;#34;start&amp;#34;: 0.0, &amp;#34;ytKey&amp;#34;: &amp;#34;PUT_YOUR_API_KEY_HERE&amp;#34;, &amp;#34;recordedYoutubeIsAvailable&amp;#34;: false, &amp;#34;ytApiUrl&amp;#34;: &amp;#34;https://www.youtube.com/iframe_api&amp;#34;, &amp;#34;saveStateUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@ce5a2de4357b429dac3b42bda12a3940/handler/xmodule_handler/save_user_state&amp;#34;, &amp;#34;transcriptAvailableTranslationsUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@ce5a2de4357b429dac3b42bda12a3940/handler/transcript/available_translations&amp;#34;, &amp;#34;transcriptLanguage&amp;#34;: &amp;#34;en&amp;#34;, &amp;#34;showCaptions&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;autohideHtml5&amp;#34;: false, &amp;#34;streams&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;transcriptTranslationUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@ce5a2de4357b429dac3b42bda12a3940/handler/transcript/translation/__lang__&amp;#34;, &amp;#34;captionDataDir&amp;#34;: null, &amp;#34;autoplay&amp;#34;: false}&#39;
+    data-bumper-metadata=&#39;null&#39;
+    data-poster=&#39;null&#39;
+    tabindex=&#34;-1&#34;
+&gt;
+    &lt;div class=&#34;focus_grabber first&#34;&gt;&lt;/div&gt;
+
+    &lt;div class=&#34;tc-wrapper&#34;&gt;
+      &lt;div class=&#34;video-wrapper&#34;&gt;
+          &lt;span tabindex=&#34;0&#34; class=&#34;spinner&#34; aria-hidden=&#34;false&#34; aria-label=&#34;Loading video player&#34;&gt;&lt;/span&gt;
+          &lt;span tabindex=&#34;-1&#34; class=&#34;btn-play is-hidden&#34; aria-hidden=&#34;true&#34; aria-label=&#34;Play video&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;video-player-pre&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-player&#34;&gt;
+              &lt;div id=&#34;ce5a2de4357b429dac3b42bda12a3940&#34;&gt;&lt;/div&gt;
+              &lt;h4 class=&#34;hd hd-4 video-error is-hidden&#34;&gt;No playable video sources found.&lt;/h4&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;video-player-post&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;closed-captions&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-controls is-hidden&#34;&gt;
+              &lt;div&gt;
+                  &lt;div class=&#34;vcr&#34;&gt;&lt;div class=&#34;vidtime&#34;&gt;0:00 / 0:00&lt;/div&gt;&lt;/div&gt;
+                  &lt;div class=&#34;secondary-controls&#34;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;focus_grabber last&#34;&gt;&lt;/div&gt;
+    
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_1"
+    aria-labelledby="tab_1"
+    aria-hidden="true"
+    class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-vertical&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;VerticalStudentView&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@vertical+block@6fe7363d80eb4546abd6d62a857901f6&#34; data-block-type=&#34;vertical&#34;&gt;
+  
+
+  &lt;h3 class=&#34;unit-title&#34;&gt;What is Deep Learning&lt;/h3&gt;
+
+    
+
+
+&lt;div class=&#34;bookmark-button-wrapper&#34;&gt;
+  &lt;button class=&#34;btn btn-link bookmark-button &#34;
+    aria-pressed=&#34;false&#34;
+    data-bookmark-id=&#34;edx006,block-v1:EDX+DAT236x+2018+type@vertical+block@6fe7363d80eb4546abd6d62a857901f6&#34;&gt;
+     &lt;span class=&#34;sr bookmark-sr&#34;&gt;Click to add&lt;/span&gt;
+     &lt;span class=&#34;bookmark-text&#34;&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;vert-mod&#34;&gt;
+  &lt;div class=&#34;vert vert-0&#34; data-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@5e0ff3da23904031a1aedb2fc6823b42&#34;&gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-video xmodule_display xmodule_VideoModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;video&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@5e0ff3da23904031a1aedb2fc6823b42&#34; data-type=&#34;Video&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Video&#34;}
+  &lt;/script&gt;
+  
+
+
+    &lt;h3 class=&#34;hd hd-2&#34;&gt;Video&lt;/h3&gt;
+
+&lt;div
+    id=&#34;video_5e0ff3da23904031a1aedb2fc6823b42&#34;
+    class=&#34;video closed&#34;
+    data-metadata=&#39;{&amp;#34;savedVideoPosition&amp;#34;: 82.0, &amp;#34;ytMetadataUrl&amp;#34;: &amp;#34;https://www.googleapis.com/youtube/v3/videos/&amp;#34;, &amp;#34;sources&amp;#34;: [&amp;#34;https://edxmediastroage.blob.core.chinacloudapi.cn/course/MSXDLEXX2017-V003400_DTH.mp4&amp;#34;], &amp;#34;speed&amp;#34;: null, &amp;#34;generalSpeed&amp;#34;: 1.0, &amp;#34;end&amp;#34;: 0.0, &amp;#34;sub&amp;#34;: &amp;#34;MSXDLEXX2017-V003400_DTH&amp;#34;, &amp;#34;ytTestTimeout&amp;#34;: 1500, &amp;#34;transcriptLanguages&amp;#34;: {&amp;#34;en&amp;#34;: &amp;#34;English&amp;#34;}, &amp;#34;start&amp;#34;: 0.0, &amp;#34;ytKey&amp;#34;: &amp;#34;PUT_YOUR_API_KEY_HERE&amp;#34;, &amp;#34;recordedYoutubeIsAvailable&amp;#34;: false, &amp;#34;ytApiUrl&amp;#34;: &amp;#34;https://www.youtube.com/iframe_api&amp;#34;, &amp;#34;saveStateUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@5e0ff3da23904031a1aedb2fc6823b42/handler/xmodule_handler/save_user_state&amp;#34;, &amp;#34;transcriptAvailableTranslationsUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@5e0ff3da23904031a1aedb2fc6823b42/handler/transcript/available_translations&amp;#34;, &amp;#34;transcriptLanguage&amp;#34;: &amp;#34;en&amp;#34;, &amp;#34;showCaptions&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;autohideHtml5&amp;#34;: false, &amp;#34;streams&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;transcriptTranslationUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@5e0ff3da23904031a1aedb2fc6823b42/handler/transcript/translation/__lang__&amp;#34;, &amp;#34;captionDataDir&amp;#34;: null, &amp;#34;autoplay&amp;#34;: false}&#39;
+    data-bumper-metadata=&#39;null&#39;
+    data-poster=&#39;null&#39;
+    tabindex=&#34;-1&#34;
+&gt;
+    &lt;div class=&#34;focus_grabber first&#34;&gt;&lt;/div&gt;
+
+    &lt;div class=&#34;tc-wrapper&#34;&gt;
+      &lt;div class=&#34;video-wrapper&#34;&gt;
+          &lt;span tabindex=&#34;0&#34; class=&#34;spinner&#34; aria-hidden=&#34;false&#34; aria-label=&#34;Loading video player&#34;&gt;&lt;/span&gt;
+          &lt;span tabindex=&#34;-1&#34; class=&#34;btn-play is-hidden&#34; aria-hidden=&#34;true&#34; aria-label=&#34;Play video&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;video-player-pre&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-player&#34;&gt;
+              &lt;div id=&#34;5e0ff3da23904031a1aedb2fc6823b42&#34;&gt;&lt;/div&gt;
+              &lt;h4 class=&#34;hd hd-4 video-error is-hidden&#34;&gt;No playable video sources found.&lt;/h4&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;video-player-post&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;closed-captions&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-controls is-hidden&#34;&gt;
+              &lt;div&gt;
+                  &lt;div class=&#34;vcr&#34;&gt;&lt;div class=&#34;vidtime&#34;&gt;0:00 / 0:00&lt;/div&gt;&lt;/div&gt;
+                  &lt;div class=&#34;secondary-controls&#34;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;focus_grabber last&#34;&gt;&lt;/div&gt;
+    
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_2"
+    aria-labelledby="tab_2"
+    aria-hidden="true"
+    class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-vertical&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;VerticalStudentView&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@vertical+block@dcbbc95341cc41e7b65163e1f6e31dea&#34; data-block-type=&#34;vertical&#34;&gt;
+  
+
+  &lt;h3 class=&#34;unit-title&#34;&gt;Machine Learning Recap&lt;/h3&gt;
+
+    
+
+
+&lt;div class=&#34;bookmark-button-wrapper&#34;&gt;
+  &lt;button class=&#34;btn btn-link bookmark-button &#34;
+    aria-pressed=&#34;false&#34;
+    data-bookmark-id=&#34;edx006,block-v1:EDX+DAT236x+2018+type@vertical+block@dcbbc95341cc41e7b65163e1f6e31dea&#34;&gt;
+     &lt;span class=&#34;sr bookmark-sr&#34;&gt;Click to add&lt;/span&gt;
+     &lt;span class=&#34;bookmark-text&#34;&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;vert-mod&#34;&gt;
+  &lt;div class=&#34;vert vert-0&#34; data-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@a676c65dd1f44dec83766f0a3baf612e&#34;&gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-video xmodule_display xmodule_VideoModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;video&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@a676c65dd1f44dec83766f0a3baf612e&#34; data-type=&#34;Video&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Video&#34;}
+  &lt;/script&gt;
+  
+
+
+    &lt;h3 class=&#34;hd hd-2&#34;&gt;Video&lt;/h3&gt;
+
+&lt;div
+    id=&#34;video_a676c65dd1f44dec83766f0a3baf612e&#34;
+    class=&#34;video closed&#34;
+    data-metadata=&#39;{&amp;#34;savedVideoPosition&amp;#34;: 149.0, &amp;#34;ytMetadataUrl&amp;#34;: &amp;#34;https://www.googleapis.com/youtube/v3/videos/&amp;#34;, &amp;#34;sources&amp;#34;: [&amp;#34;https://edxmediastroage.blob.core.chinacloudapi.cn/course/MSXDLEXX2017-V003200_DTH.mp4&amp;#34;], &amp;#34;speed&amp;#34;: null, &amp;#34;generalSpeed&amp;#34;: 1.0, &amp;#34;end&amp;#34;: 0.0, &amp;#34;sub&amp;#34;: &amp;#34;MSXDLEXX2017-V003200_DTH&amp;#34;, &amp;#34;ytTestTimeout&amp;#34;: 1500, &amp;#34;transcriptLanguages&amp;#34;: {&amp;#34;en&amp;#34;: &amp;#34;English&amp;#34;}, &amp;#34;start&amp;#34;: 0.0, &amp;#34;ytKey&amp;#34;: &amp;#34;PUT_YOUR_API_KEY_HERE&amp;#34;, &amp;#34;recordedYoutubeIsAvailable&amp;#34;: false, &amp;#34;ytApiUrl&amp;#34;: &amp;#34;https://www.youtube.com/iframe_api&amp;#34;, &amp;#34;saveStateUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@a676c65dd1f44dec83766f0a3baf612e/handler/xmodule_handler/save_user_state&amp;#34;, &amp;#34;transcriptAvailableTranslationsUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@a676c65dd1f44dec83766f0a3baf612e/handler/transcript/available_translations&amp;#34;, &amp;#34;transcriptLanguage&amp;#34;: &amp;#34;en&amp;#34;, &amp;#34;showCaptions&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;autohideHtml5&amp;#34;: false, &amp;#34;streams&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;transcriptTranslationUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@a676c65dd1f44dec83766f0a3baf612e/handler/transcript/translation/__lang__&amp;#34;, &amp;#34;captionDataDir&amp;#34;: null, &amp;#34;autoplay&amp;#34;: false}&#39;
+    data-bumper-metadata=&#39;null&#39;
+    data-poster=&#39;null&#39;
+    tabindex=&#34;-1&#34;
+&gt;
+    &lt;div class=&#34;focus_grabber first&#34;&gt;&lt;/div&gt;
+
+    &lt;div class=&#34;tc-wrapper&#34;&gt;
+      &lt;div class=&#34;video-wrapper&#34;&gt;
+          &lt;span tabindex=&#34;0&#34; class=&#34;spinner&#34; aria-hidden=&#34;false&#34; aria-label=&#34;Loading video player&#34;&gt;&lt;/span&gt;
+          &lt;span tabindex=&#34;-1&#34; class=&#34;btn-play is-hidden&#34; aria-hidden=&#34;true&#34; aria-label=&#34;Play video&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;video-player-pre&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-player&#34;&gt;
+              &lt;div id=&#34;a676c65dd1f44dec83766f0a3baf612e&#34;&gt;&lt;/div&gt;
+              &lt;h4 class=&#34;hd hd-4 video-error is-hidden&#34;&gt;No playable video sources found.&lt;/h4&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;video-player-post&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;closed-captions&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-controls is-hidden&#34;&gt;
+              &lt;div&gt;
+                  &lt;div class=&#34;vcr&#34;&gt;&lt;div class=&#34;vidtime&#34;&gt;0:00 / 0:00&lt;/div&gt;&lt;/div&gt;
+                  &lt;div class=&#34;secondary-controls&#34;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;focus_grabber last&#34;&gt;&lt;/div&gt;
+    
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_3"
+    aria-labelledby="tab_3"
+    aria-hidden="true"
+    class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-vertical&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;VerticalStudentView&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@vertical+block@d1a6c7089b47473faf07a60a2d74381d&#34; data-block-type=&#34;vertical&#34;&gt;
+  
+
+  &lt;h3 class=&#34;unit-title&#34;&gt;Train Workflow&lt;/h3&gt;
+
+    
+
+
+&lt;div class=&#34;bookmark-button-wrapper&#34;&gt;
+  &lt;button class=&#34;btn btn-link bookmark-button &#34;
+    aria-pressed=&#34;false&#34;
+    data-bookmark-id=&#34;edx006,block-v1:EDX+DAT236x+2018+type@vertical+block@d1a6c7089b47473faf07a60a2d74381d&#34;&gt;
+     &lt;span class=&#34;sr bookmark-sr&#34;&gt;Click to add&lt;/span&gt;
+     &lt;span class=&#34;bookmark-text&#34;&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;vert-mod&#34;&gt;
+  &lt;div class=&#34;vert vert-0&#34; data-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@481198d6d7c34391925a544c75889977&#34;&gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-video xmodule_display xmodule_VideoModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;video&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@481198d6d7c34391925a544c75889977&#34; data-type=&#34;Video&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Video&#34;}
+  &lt;/script&gt;
+  
+
+
+    &lt;h3 class=&#34;hd hd-2&#34;&gt;Video&lt;/h3&gt;
+
+&lt;div
+    id=&#34;video_481198d6d7c34391925a544c75889977&#34;
+    class=&#34;video closed&#34;
+    data-metadata=&#39;{&amp;#34;savedVideoPosition&amp;#34;: 308.0, &amp;#34;ytMetadataUrl&amp;#34;: &amp;#34;https://www.googleapis.com/youtube/v3/videos/&amp;#34;, &amp;#34;sources&amp;#34;: [&amp;#34;https://edxmediastroage.blob.core.chinacloudapi.cn/course/MSXDLEXX2017-V003300_DTH.mp4&amp;#34;], &amp;#34;speed&amp;#34;: null, &amp;#34;generalSpeed&amp;#34;: 1.0, &amp;#34;end&amp;#34;: 0.0, &amp;#34;sub&amp;#34;: &amp;#34;MSXDLEXX2017-V003300_DTH&amp;#34;, &amp;#34;ytTestTimeout&amp;#34;: 1500, &amp;#34;transcriptLanguages&amp;#34;: {&amp;#34;en&amp;#34;: &amp;#34;English&amp;#34;}, &amp;#34;start&amp;#34;: 0.0, &amp;#34;ytKey&amp;#34;: &amp;#34;PUT_YOUR_API_KEY_HERE&amp;#34;, &amp;#34;recordedYoutubeIsAvailable&amp;#34;: false, &amp;#34;ytApiUrl&amp;#34;: &amp;#34;https://www.youtube.com/iframe_api&amp;#34;, &amp;#34;saveStateUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@481198d6d7c34391925a544c75889977/handler/xmodule_handler/save_user_state&amp;#34;, &amp;#34;transcriptAvailableTranslationsUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@481198d6d7c34391925a544c75889977/handler/transcript/available_translations&amp;#34;, &amp;#34;transcriptLanguage&amp;#34;: &amp;#34;en&amp;#34;, &amp;#34;showCaptions&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;autohideHtml5&amp;#34;: false, &amp;#34;streams&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;transcriptTranslationUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@481198d6d7c34391925a544c75889977/handler/transcript/translation/__lang__&amp;#34;, &amp;#34;captionDataDir&amp;#34;: null, &amp;#34;autoplay&amp;#34;: false}&#39;
+    data-bumper-metadata=&#39;null&#39;
+    data-poster=&#39;null&#39;
+    tabindex=&#34;-1&#34;
+&gt;
+    &lt;div class=&#34;focus_grabber first&#34;&gt;&lt;/div&gt;
+
+    &lt;div class=&#34;tc-wrapper&#34;&gt;
+      &lt;div class=&#34;video-wrapper&#34;&gt;
+          &lt;span tabindex=&#34;0&#34; class=&#34;spinner&#34; aria-hidden=&#34;false&#34; aria-label=&#34;Loading video player&#34;&gt;&lt;/span&gt;
+          &lt;span tabindex=&#34;-1&#34; class=&#34;btn-play is-hidden&#34; aria-hidden=&#34;true&#34; aria-label=&#34;Play video&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;video-player-pre&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-player&#34;&gt;
+              &lt;div id=&#34;481198d6d7c34391925a544c75889977&#34;&gt;&lt;/div&gt;
+              &lt;h4 class=&#34;hd hd-4 video-error is-hidden&#34;&gt;No playable video sources found.&lt;/h4&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;video-player-post&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;closed-captions&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-controls is-hidden&#34;&gt;
+              &lt;div&gt;
+                  &lt;div class=&#34;vcr&#34;&gt;&lt;div class=&#34;vidtime&#34;&gt;0:00 / 0:00&lt;/div&gt;&lt;/div&gt;
+                  &lt;div class=&#34;secondary-controls&#34;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;focus_grabber last&#34;&gt;&lt;/div&gt;
+    
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_contents_4"
+    aria-labelledby="tab_4"
+    aria-hidden="true"
+    class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-vertical&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;VerticalStudentView&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@vertical+block@8707f4d9a93c41a5aaac34d27fdab950&#34; data-block-type=&#34;vertical&#34;&gt;
+  
+
+  &lt;h3 class=&#34;unit-title&#34;&gt;Validation and Test Workflow&lt;/h3&gt;
+
+    
+
+
+&lt;div class=&#34;bookmark-button-wrapper&#34;&gt;
+  &lt;button class=&#34;btn btn-link bookmark-button &#34;
+    aria-pressed=&#34;false&#34;
+    data-bookmark-id=&#34;edx006,block-v1:EDX+DAT236x+2018+type@vertical+block@8707f4d9a93c41a5aaac34d27fdab950&#34;&gt;
+     &lt;span class=&#34;sr bookmark-sr&#34;&gt;Click to add&lt;/span&gt;
+     &lt;span class=&#34;bookmark-text&#34;&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;vert-mod&#34;&gt;
+  &lt;div class=&#34;vert vert-0&#34; data-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@2cb9230009be497c873c82589232df92&#34;&gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-video xmodule_display xmodule_VideoModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;video&#34; data-request-token=&#34;c95de0ee6a4b11e8b9370017fa00df4b&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:EDX+DAT236x+2018+type@video+block@2cb9230009be497c873c82589232df92&#34; data-type=&#34;Video&#34; data-course-id=&#34;course-v1:EDX+DAT236x+2018&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Video&#34;}
+  &lt;/script&gt;
+  
+
+
+    &lt;h3 class=&#34;hd hd-2&#34;&gt;Video&lt;/h3&gt;
+
+&lt;div
+    id=&#34;video_2cb9230009be497c873c82589232df92&#34;
+    class=&#34;video closed&#34;
+    data-metadata=&#39;{&amp;#34;savedVideoPosition&amp;#34;: 0.0, &amp;#34;ytMetadataUrl&amp;#34;: &amp;#34;https://www.googleapis.com/youtube/v3/videos/&amp;#34;, &amp;#34;sources&amp;#34;: [&amp;#34;https://edxmediastroage.blob.core.chinacloudapi.cn/course/MSXDLEXX2017-V003600_DTH.mp4&amp;#34;], &amp;#34;speed&amp;#34;: null, &amp;#34;generalSpeed&amp;#34;: 1.0, &amp;#34;end&amp;#34;: 0.0, &amp;#34;sub&amp;#34;: &amp;#34;MSXDLEXX2017-V003600_DTH&amp;#34;, &amp;#34;ytTestTimeout&amp;#34;: 1500, &amp;#34;transcriptLanguages&amp;#34;: {&amp;#34;en&amp;#34;: &amp;#34;English&amp;#34;}, &amp;#34;start&amp;#34;: 0.0, &amp;#34;ytKey&amp;#34;: &amp;#34;PUT_YOUR_API_KEY_HERE&amp;#34;, &amp;#34;recordedYoutubeIsAvailable&amp;#34;: false, &amp;#34;ytApiUrl&amp;#34;: &amp;#34;https://www.youtube.com/iframe_api&amp;#34;, &amp;#34;saveStateUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@2cb9230009be497c873c82589232df92/handler/xmodule_handler/save_user_state&amp;#34;, &amp;#34;transcriptAvailableTranslationsUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@2cb9230009be497c873c82589232df92/handler/transcript/available_translations&amp;#34;, &amp;#34;transcriptLanguage&amp;#34;: &amp;#34;en&amp;#34;, &amp;#34;showCaptions&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;autohideHtml5&amp;#34;: false, &amp;#34;streams&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;transcriptTranslationUrl&amp;#34;: &amp;#34;/courses/course-v1:EDX+DAT236x+2018/xblock/block-v1:EDX+DAT236x+2018+type@video+block@2cb9230009be497c873c82589232df92/handler/transcript/translation/__lang__&amp;#34;, &amp;#34;captionDataDir&amp;#34;: null, &amp;#34;autoplay&amp;#34;: false}&#39;
+    data-bumper-metadata=&#39;null&#39;
+    data-poster=&#39;null&#39;
+    tabindex=&#34;-1&#34;
+&gt;
+    &lt;div class=&#34;focus_grabber first&#34;&gt;&lt;/div&gt;
+
+    &lt;div class=&#34;tc-wrapper&#34;&gt;
+      &lt;div class=&#34;video-wrapper&#34;&gt;
+          &lt;span tabindex=&#34;0&#34; class=&#34;spinner&#34; aria-hidden=&#34;false&#34; aria-label=&#34;Loading video player&#34;&gt;&lt;/span&gt;
+          &lt;span tabindex=&#34;-1&#34; class=&#34;btn-play is-hidden&#34; aria-hidden=&#34;true&#34; aria-label=&#34;Play video&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;video-player-pre&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-player&#34;&gt;
+              &lt;div id=&#34;2cb9230009be497c873c82589232df92&#34;&gt;&lt;/div&gt;
+              &lt;h4 class=&#34;hd hd-4 video-error is-hidden&#34;&gt;No playable video sources found.&lt;/h4&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;video-player-post&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;closed-captions&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;video-controls is-hidden&#34;&gt;
+              &lt;div&gt;
+                  &lt;div class=&#34;vcr&#34;&gt;&lt;div class=&#34;vidtime&#34;&gt;0:00 / 0:00&lt;/div&gt;&lt;/div&gt;
+                  &lt;div class=&#34;secondary-controls&#34;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;focus_grabber last&#34;&gt;&lt;/div&gt;
+    
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_content"></div>
+
+  <nav class="sequence-bottom" aria-label="Section">
+    <button class="sequence-nav-button button-previous">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span>Previous</span>
+    </button>
+    <button class="sequence-nav-button button-next">
+      <span>Next</span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+  </nav>
+</div>
+
+</div>
+
+        </main>
+    </section>
+
+    <section class="courseware-results-wrapper">
+      <div id="loading-message" aria-live="polite" aria-relevant="all"></div>
+      <div id="error-message" aria-live="polite"></div>
+      <div class="courseware-results search-results" data-course-id="course-v1:EDX+DAT236x+2018" data-lang-code="en"></div>
+    </section>
+
+  </div>
+</div>
+<div class="container-footer">
+</div>
+
+<nav class="nav-utilities " aria-label="Course Utilities">
+
+</nav>
+
+
+<div id="accessibile-confirm-modal" class="modal" aria-hidden="true">
+  <div class="inner-wrapper" role="dialog" aria-labelledby="accessibile-confirm-title">
+    <button class="close-modal">
+      <span class="icon fa fa-remove" aria-hidden="true"></span>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+
+    <header>
+      <h2 id="accessibile-confirm-title">
+          Confirm
+        <span class="sr">,
+          modal open
+        </span>
+      </h2>
+    </header>
+    <div role="alertdialog" class="status message" tabindex="-1">
+        <p class="message-title"></p>
+    </div>
+    <hr aria-hidden="true" />
+    <div class="actions">
+        <button class="dismiss ok-button">OK</button>
+        <button class="dismiss cancel-button" data-dismiss="leanModal">Cancel</button>
+    </div>
+  </div>
+  <a href="#accessibile-confirm-modal" rel="leanModal" id="confirm_open_button" style="display:none">open</a>
+</div>
+
+<script type="text/javascript">
+var accessible_confirm = function(message, callback) {
+    $("#accessibile-confirm-modal .cancel-button").click(function(){
+        $("#accessibile-confirm-modal .close-modal").click();
+    });
+    $("#accessibile-confirm-modal .ok-button").click(function(){
+        $("#accessibile-confirm-modal .close-modal").click();
+        callback();
+    });
+
+    accessible_modal("#accessibile-confirm-modal #confirm_open_button", "#accessibile-confirm-modal .close-modal", "#accessibile-confirm-modal", ".content-wrapper");
+    $("#accessibile-confirm-modal #confirm_open_button").click();
+    $("#accessibile-confirm-modal .message-title").html(message);
+};
+</script>
+
+
+      
+    </div>
+
+        
+
+
+
+
+<div class="wrapper wrapper-footer">
+  <footer id="footer-openedx" class="grid-container"
+  >
+    <div class="colophon">
+      <nav class="nav-colophon" aria-label="About">
+        <ol>
+            <li class="nav-colophon-01">
+              <a id="about" href="/about">About</a>
+            </li>
+            <li class="nav-colophon-02">
+              <a id="blog" href="/blog">Blog</a>
+            </li>
+            <li class="nav-colophon-03">
+              <a id="contact" href="/contact">Contact</a>
+            </li>
+            <li class="nav-colophon-04">
+              <a id="donate" href="/donate">Donate</a>
+            </li>
+        </ol>
+      </nav>
+
+      <div class="wrapper-logo">
+        <p>
+          <a href="/">
+            <img alt="organization logo" src="https://lms-newedx21-tm.trafficmanager.net/static/images/logo.b6c374d66d57.png">
+          </a>
+        </p>
+      </div>
+
+      <p class="copyright">© Contoso Learning.  All rights reserved except where noted.  EdX, Open edX and the edX and Open EdX logos are registered trademarks or trademarks of edX Inc.</p>
+
+      <nav class="nav-legal" aria-label="Legal">
+        <ul>
+            <li class="nav-legal-01">
+              <a href="/privacy">Privacy Policy</a>
+            </li>
+            <li class="nav-legal-02">
+              <a href="/tos">Terms of Service</a>
+            </li>
+            <li class="nav-legal-03">
+              <a href="/honor">Honor Code</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-about-openedx">
+      <p>
+        <a href="http://open.edx.org">
+          <img src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png" alt="Powered by Open edX" width="140" />
+        </a>
+      </p>
+    </div>
+  </footer>
+</div>
+
+
+  </div>
+
+  
+  <script type="text/javascript" src="/static/common/js/vendor/jquery.scrollTo.525edcc52fe8.js"></script>
+  <script type="text/javascript" src="/static/js/vendor/flot/jquery.flot.d3d45ff0c6a8.js"></script>
+
+  <script type="text/javascript" src="/static/js/vendor/codemirror-compressed.dd4b74f7c5fe.js"></script>
+
+  
+    <script type="text/javascript" src="/static/js/lms-courseware.94e582ddac20.js" charset="utf-8"></script>
+
+
+  
+
+
+
+<script type="text/javascript">
+    // Fast Preview was introduced in 2.5. However, it
+    // causes undesirable flashing/font size changes when
+    // MathJax is used for interactive preview (equation editor).
+    // Setting processSectionDelay to 0 (see below) fully eliminates
+    // fast preview, but to reduce confusion, we are also setting
+    // the option as displayed in the context menu to false.
+    // When upgrading to 2.6, check if this variable name changed.
+    window.MathJax = {
+      menuSettings: {CHTMLpreview: false}
+    };
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+
+  // In order to eliminate all flashing during interactive
+  // preview, it is necessary to set processSectionDelay to 0
+  // (remove delay between input and output phases). This
+  // effectively disables fast preview, regardless of
+  // the fast preview setting as shown in the context menu.
+  MathJax.Hub.processSectionDelay = 0;
+
+  MathJax.Hub.signal.Interest(function(message) {
+    if(message[0] === "End Math") {
+        set_mathjax_display_div_settings();
+    }
+  });
+  function set_mathjax_display_div_settings() {
+    $('.MathJax_Display').each(function( index ) {
+      this.setAttribute('tabindex', '0');
+      this.setAttribute('aria-live', 'off');
+      this.removeAttribute('role');
+      this.removeAttribute('aria-readonly');
+    });
+  }
+</script>
+
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_SVG"></script>
+
+
+
+  
+    
+      <script type="text/javascript" src="/static/js/courseware/courseware_factory.ff726dbd2c81.js?raw"></script>
+    <script type="text/javascript">
+        (function (require) {
+            require(['js/courseware/courseware_factory'], function (CoursewareFactory) {
+                
+    CoursewareFactory();
+  
+            });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+
+
+  <script type="text/javascript">
+    var $$course_id = "course\u002Dv1:EDX+DAT236x+2018";
+  </script>
+
+<script src='/static/xblock/resources/xmodule.vertical_block/public/js/vertical_student_view.7c27fd5e4fd0.js' type='application/javascript'></script>
+
+
+
+  
+
+
+
+  <script type="text/javascript" src="/static/js/vendor/noreferrer.aa62a3e70ffa.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/static/js/utils/navigation.323bf3e1ae16.js" charset="utf-8"></script>
+  
+</body>
+</html>
+
+
+
+<!-- Performance beacon for onload times -->
