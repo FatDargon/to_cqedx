@@ -8,14 +8,15 @@ from bs4 import BeautifulSoup
 from tools.mprint import pretty_list
 import re
 import json
-def get_result_list(str):
+def get_video_url(str):
     _result = []
-    soup = BeautifulSoup(r_f, "lxml")
+    soup = BeautifulSoup(str, "lxml")
     seq_contents = soup.find_all("div",class_=re.compile("seq_contents"))
     for _content in seq_contents:
         _item = {
             "title": "",
-            "url": ""
+            "url": "",
+            "translation":""
         }
         _content_text = _content.get_text(strip= True)
         soup2 = BeautifulSoup(_content_text, "lxml")
@@ -31,14 +32,16 @@ def get_result_list(str):
                 ii = json.loads(i)
                 _url = ii["sources"][0]
                 _item['url']=_url
-                # _translation = ii["transcriptAvailableTranslationsUrl"].replace("")
-                # print (_translation)
+                _lang = ii["transcriptLanguage"] 
+                base_url = 'https://www.cqedx.cn'
+                _translation = base_url+ii["transcriptTranslationUrl"].replace("__lang__",_lang)
+                _item["translation"]=_translation
         _result.append(_item)
         del _item
     return _result
 if __name__ == '__main__':
     with open('../test/test_html.txt',"r") as r_f:
-        _result = get_result_list(r_f)
+        _result = get_video_url(r_f)
         pretty_list (_result)
 #     _p = _nav.find_all("a",class_="accordion-nav")
 #     for i in _p:

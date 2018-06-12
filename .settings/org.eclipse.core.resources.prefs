@@ -1,8 +1,11 @@
 eclipse.preferences.version=1
+encoding//mainfun/GetClient.py=utf-8
+encoding//mainfun/main.py=utf-8
 encoding//test/test1.py=utf-8
 encoding//test/test2.py=utf-8
 encoding//test/test3.py=utf-8
-encoding//test/test_analyse.py=utf-8
 encoding//test/test_srt.py=utf-8
+encoding//tools/AnalyseMain.py=utf-8
 encoding//tools/GetSrt.py=utf-8
+encoding//tools/GetVideoUrl.py=utf-8
 encoding//tools/mprint.py=utf-8

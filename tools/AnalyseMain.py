@@ -9,7 +9,7 @@ from tools.mprint import pretty_list
 def get_result_list(str):
     _result = []
 
-    soup = BeautifulSoup(r_f, "lxml")
+    soup = BeautifulSoup(str, "lxml")
     _nav = soup.find("nav", class_="course-navigation")  # , {"aria-label":"Course"})
     #     print (_nav)
     _as = _nav.find_all("a", class_="button-chapter")
@@ -37,7 +37,7 @@ def get_result_list(str):
                     suburl = base_url + i['href']
                     subtitle = i.get_text(strip=True).replace("current section", "")
                     _subitem["subtitle"] = subtitle
-                    _subitem["suburl"] = suburl[-3:]
+                    _subitem["suburl"] = suburl#suburl[-3:]
                     _item["submenu"].append(_subitem)
                     del _subitem
                     # print (suburl)
@@ -49,7 +49,7 @@ def get_result_list(str):
         del _item
     return _result
 if __name__ == '__main__':
-    with open('test_html.txt',"r") as r_f:
+    with open('../test/test_html.txt',"r") as r_f:
         _result = get_result_list(r_f)
         pretty_list (_result)
 #     _p = _nav.find_all("a",class_="accordion-nav")

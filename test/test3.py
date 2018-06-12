@@ -23,8 +23,8 @@ url ='https://www.cqedx.cn/user_api/v1/account/login_session/' #'http://httpbin.
 _param ={"email":'edx006@ruitong.cn',"password":'P@ssw0rd','remember':'true'}
 r = client.post(url, data=_param,headers = headers)
 print (r)
-_new_url = 'https://www.cqedx.cn/courses/course-v1:EDX+DAT236x+2018/courseware/0cd24d399d3b45a49c12b59d222518de/eb2c28f63bde496685005ac814d63de8/'
-r = client.get(_new_url)  
-soup = BeautifulSoup(r.text, "lxml")
-_nav = soup.find("nav", {"aria-label":"Course"})
-print _nav
+# _new_url = 'https://www.cqedx.cn/courses/course-v1:EDX+DAT236x+2018/courseware/0cd24d399d3b45a49c12b59d222518de/eb2c28f63bde496685005ac814d63de8/'
+# r = client.get(_new_url)  
+# soup = BeautifulSoup(r.text, "lxml")
+# _nav = soup.find("nav", {"aria-label":"Course"})
+# print _nav
